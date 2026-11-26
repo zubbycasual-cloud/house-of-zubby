@@ -1,0 +1,667 @@
+/* =====================================================
+   HOUSE OF ZUBBY
+   RESPONSIVE DESIGN SYSTEM
+   Desktop | Tablet | Mobile
+   ===================================================== */
+
+
+/* =====================================================
+   01. LARGE LAPTOPS & SMALL DESKTOPS
+===================================================== */
+
+@media (max-width: 1200px) {
+
+    .header-container {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        gap: 22px;
+    }
+
+    .section-padding {
+        padding: 90px 5%;
+    }
+
+    .brand-intro,
+    .about-section {
+        gap: 55px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .product-image {
+        height: 330px;
+    }
+
+    .collection-image {
+        height: 420px;
+    }
+
+}
+
+
+/* =====================================================
+   02. TABLETS
+===================================================== */
+
+@media (max-width: 992px) {
+
+    /* HEADER */
+
+    .header {
+        height: 80px;
+    }
+
+    .header-container {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .header-actions {
+        gap: 16px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 650px;
+        height: 80vh;
+        background-position: 60% center;
+    }
+
+    .hero-content {
+        padding-left: 7%;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(65px, 8vw, 85px);
+    }
+
+
+    /* BRAND INTRO */
+
+    .brand-intro,
+    .about-section {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+    .intro-image,
+    .about-image {
+        height: 430px;
+    }
+
+
+    /* COLLECTIONS */
+
+    .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .collection-image {
+        height: 400px;
+    }
+
+    .collection-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+
+    /* PRODUCTS */
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 20px;
+    }
+
+    .product-image {
+        height: 400px;
+    }
+
+
+    /* PRE-ORDER */
+
+    .preorder-content {
+        padding: 70px 8%;
+    }
+
+    .preorder-content h2 {
+        font-size: 48px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-main {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 45px;
+    }
+
+}
+
+
+/* =====================================================
+   03. MOBILE NAVIGATION & TABLETS
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* ANNOUNCEMENT */
+
+    .announcement-bar {
+        height: 30px;
+    }
+
+    .announcement-bar p {
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+
+    /* HEADER */
+
+    .header {
+        height: 72px;
+    }
+
+    .header-container {
+        padding: 0 5%;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .logo small {
+        font-size: 7px;
+        letter-spacing: 2px;
+    }
+
+    .header-actions {
+        gap: 17px;
+    }
+
+    .search-btn {
+        display: none;
+    }
+
+    .icon-btn {
+        font-size: 15px;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 21px;
+    }
+
+
+    /* MOBILE NAVIGATION */
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--cream);
+        padding: 0 6%;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        border-bottom: 1px solid transparent;
+
+        transition:
+            max-height 0.4s ease,
+            opacity 0.3s ease,
+            padding 0.4s ease,
+            visibility 0.3s ease;
+    }
+
+    .navbar.active {
+        max-height: 450px;
+        padding: 28px 6%;
+        opacity: 1;
+        visibility: visible;
+        border-bottom-color: var(--border);
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .nav-links a::after {
+        bottom: -5px;
+    }
+
+
+    /* HERO SECTION */
+
+    .hero {
+        height: 750px;
+        min-height: 600px;
+        max-height: 850px;
+        background-position: 60% center;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 0 7%;
+    }
+
+    .hero-subtitle {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(55px, 12vw, 78px);
+        line-height: 1.08;
+    }
+
+    .hero-content p {
+        font-size: 12px;
+        max-width: 380px;
+    }
+
+    .hero-buttons {
+        gap: 12px;
+    }
+
+    .btn {
+        min-height: 48px;
+        padding: 0 20px;
+        font-size: 9px;
+    }
+
+    .hero-bottom {
+        left: 7%;
+        right: 7%;
+        bottom: 25px;
+        font-size: 8px;
+    }
+
+    .hero-bottom span:nth-child(2) {
+        display: none;
+    }
+
+
+    /* GENERAL SECTIONS */
+
+    .section-padding {
+        padding: 75px 6%;
+    }
+
+    .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        margin-bottom: 30px;
+    }
+
+    .section-heading h2 {
+        font-size: 38px;
+    }
+
+
+    /* BRAND INTRO */
+
+    .brand-intro,
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .intro-content h2 {
+        font-size: 48px;
+    }
+
+    .intro-image,
+    .about-image {
+        height: 450px;
+    }
+
+
+    /* COLLECTIONS */
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .collection-card:last-child {
+        grid-column: auto;
+    }
+
+    .collection-image {
+        height: 480px;
+    }
+
+    .collection-info h3 {
+        font-size: 27px;
+    }
+
+
+    /* FEATURED PRODUCTS */
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 14px;
+    }
+
+    .product-image {
+        height: 300px;
+    }
+
+    .product-details {
+        gap: 8px;
+        align-items: center;
+    }
+
+    .product-details h3 {
+        font-size: 14px;
+    }
+
+    .product-price {
+        font-size: 11px;
+    }
+
+    .product-category {
+        font-size: 7px;
+    }
+
+    .quick-add {
+        width: 34px;
+        height: 34px;
+        flex-shrink: 0;
+    }
+
+
+    /* PRE-ORDER SECTION */
+
+    .preorder-section {
+        grid-template-columns: 1fr;
+    }
+
+    .preorder-content {
+        padding: 75px 7%;
+    }
+
+    .preorder-content h2 {
+        font-size: 48px;
+    }
+
+    .preorder-content p {
+        font-size: 12px;
+    }
+
+    .preorder-image {
+        min-height: 450px;
+    }
+
+
+    /* NEWSLETTER */
+
+    .newsletter h2 {
+        font-size: 38px;
+    }
+
+    .newsletter p {
+        font-size: 12px;
+    }
+
+    .newsletter-form {
+        width: 100%;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding: 65px 6% 25px;
+    }
+
+    .footer-main {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 25px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+        line-height: 1.8;
+    }
+
+}
+
+
+/* =====================================================
+   04. SMALL MOBILE PHONES
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .header {
+        height: 68px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .header-actions {
+        gap: 14px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        height: 720px;
+        min-height: 580px;
+        background-position: 58% center;
+    }
+
+    .hero-content h1 {
+        font-size: 55px;
+    }
+
+    .hero-content p {
+        font-size: 11px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+
+    /* SECTIONS */
+
+    .section-padding {
+        padding: 65px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 33px;
+    }
+
+    .intro-content h2 {
+        font-size: 43px;
+    }
+
+    .intro-image,
+    .about-image {
+        height: 370px;
+    }
+
+
+    /* COLLECTIONS */
+
+    .collection-image {
+        height: 390px;
+    }
+
+
+    /* PRODUCTS */
+
+    .product-grid {
+        gap: 25px 10px;
+    }
+
+    .product-image {
+        height: 240px;
+    }
+
+    .product-details h3 {
+        font-size: 12px;
+    }
+
+    .product-price {
+        font-size: 10px;
+    }
+
+    .product-tag {
+        font-size: 7px;
+        padding: 6px 8px;
+    }
+
+    .quick-add {
+        width: 30px;
+        height: 30px;
+        font-size: 11px;
+    }
+
+
+    /* PRE-ORDER */
+
+    .preorder-content {
+        padding: 65px 6%;
+    }
+
+    .preorder-content h2 {
+        font-size: 42px;
+    }
+
+    .preorder-image {
+        min-height: 350px;
+    }
+
+
+    /* NEWSLETTER */
+
+    .newsletter h2 {
+        font-size: 32px;
+    }
+
+    .newsletter-form input {
+        font-size: 10px;
+    }
+
+    .newsletter-form button {
+        font-size: 8px;
+        gap: 7px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-main {
+        gap: 35px 15px;
+    }
+
+    .footer-links h4 {
+        font-size: 9px;
+    }
+
+    .footer-links a {
+        font-size: 10px;
+    }
+
+}
+
+
+/* =====================================================
+   05. EXTRA SMALL DEVICES
+===================================================== */
+
+@media (max-width: 360px) {
+
+    .logo {
+        font-size: 14px;
+    }
+
+    .header-actions {
+        gap: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 46px;
+    }
+
+    .hero-subtitle {
+        font-size: 8px;
+    }
+
+    .product-image {
+        height: 205px;
+    }
+
+    .product-details h3 {
+        font-size: 11px;
+    }
+
+    .quick-add {
+        width: 27px;
+        height: 27px;
+    }
+
+    .collection-image {
+        height: 340px;
+    }
+
+}
+
+
+/* =====================================================
+   06. ACCESSIBILITY & MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
